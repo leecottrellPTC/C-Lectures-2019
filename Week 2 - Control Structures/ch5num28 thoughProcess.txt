@@ -1,0 +1,9 @@
+profit = 600 * 50 - 27 * 50 = 28,650
+profit = rent * rented - maintenance * rented
+profit = (rent - maintenance) * rented
+
+loop until max is reached
+rent += 40
+units--
+
+profit = (640 - 27) * 49 = 30,037
