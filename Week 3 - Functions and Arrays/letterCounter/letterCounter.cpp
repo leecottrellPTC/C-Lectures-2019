@@ -11,6 +11,8 @@ using namespace std;
 int letters[26];
 int l;
 char let;
+int numLetters = 0;
+int numLines = 0;
 
 void parseFile(string path);
 void countLetters(string line);
@@ -39,6 +41,7 @@ void parseFile(string path) {
 	}
 	while (getline(fin, line)) {
 		countLetters(line);
+		numLines++;
 	}
 	fin.close();
 }
@@ -52,13 +55,16 @@ void countLetters(string line) {
 		
 			if (let >=65 && let <=90) {	//verify the item is a letter
 				letters[let - 65] ++;
+				numLetters++;
 			}
 		}
 		
 		
 	}//end of countLetters
 void showCounts() {
+	cout <<left <<setw(10) <<  "Lines" << right << setw(6) << numLines << endl;
+	cout << left << setw(10) << "Letters" << right << setw(6) << numLetters << endl;
 	for (let = 'A'; let <= 'Z'; let++) {
-		cout << let << setw(10) << letters[let - 65] << endl;
+		cout << left << setw(10) << let << right << setw(6) << letters[let - 65] << endl;
 	}
 }
