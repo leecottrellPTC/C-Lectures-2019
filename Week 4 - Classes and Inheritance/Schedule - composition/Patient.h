@@ -1,5 +1,5 @@
-#ifndef DOCTOR
-#define DOCTOR
+#ifndef DOCTOR_CLASS
+#define DOCTOR_CLASS
 
 #include <string>
 #include "person.h"
