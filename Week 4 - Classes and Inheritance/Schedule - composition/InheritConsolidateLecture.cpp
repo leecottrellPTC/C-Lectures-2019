@@ -20,4 +20,8 @@ int main()
 
 	cout << appt2.to_string() << endl;
 
+	schedule appt3(patient("Howard", "Hanna", "Land"), Spock);
+
+	cout << appt3.to_string() << endl;
+
 }
