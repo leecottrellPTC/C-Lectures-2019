@@ -19,6 +19,7 @@ int main()
 	
 	//grr the newline problem with strings
 	cin.ignore(1000, '\n');//strips the newline from the input
+	//ignores 1000 characters until a newline is found
 	cin.clear();	//resets the error flag on cin
 
 	cout << yourName << " enter your age in human years ";

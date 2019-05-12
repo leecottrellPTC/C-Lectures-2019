@@ -23,6 +23,8 @@ int main()
 	minutes = seconds / secInMin;
 	seconds = seconds % secInMin;
 
+	//manipulators p143
+
 	cout << setfill('0') << setw(2) << hours << ":";
 	cout << setfill('0') << setw(2) << minutes << ":";
 	cout << setfill('0') << setw(2) << seconds << endl;
