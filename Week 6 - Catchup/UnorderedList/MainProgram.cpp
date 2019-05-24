@@ -16,48 +16,26 @@ int menu() {
 	return choice;
 }
 void fillListWithWords() {
-	myList.add("word");
-	myList.add("chicken");
+	myList.add("bicycle");
 	myList.add("computer");
-	myList.add("bike");
-	myList.add("apple");
-}
-void findInList() {
-	string theWord;
-	cout << "Enter a word to find";
-	cin >> theWord;
-
-	int position = myList.seqSearch(theWord);
-	if (position >= 0) {
-		cout << theWord << " is in position " << position << endl;
-	}
-	else {
-		cout << theWord << " is not in the list " << endl;
-	}
-}
-
-void removeFromList() {
-	string theWord;
-	cout << "Enter a word to kill ";
-	cin >> theWord;
-
-	myList.remove(theWord);
-}
-
-void addWordsToList() {
-	string theWord="";
-	cout << "Enter words for the list. 99 to exit.\n";
-		while (theWord != "99") {
-			cin >> theWord;
-			if (theWord != "99" && myList.seqSearch(theWord) < 0) {
-				myList.add(theWord);
-			}
-	}
+	myList.add("food");
+	myList.add("trees");
+	myList.add("doggies");
+	myList.add("chocolate");
+	/*
+		array[0] = "bicycle";
+		array[1] = "computer";
+		array[3] = "food";
+		array[3] = "trees";
+		array[4] = "doggies";
+	*/
 
 }
+
 int main()
 {
-	int choice;
+	string theWord;
+	int choice, pos;
 	fillListWithWords();
 	//displayList();
 	do {
@@ -69,15 +47,36 @@ int main()
 			break;
 		case 2:
 			//ADD TO LIST
-			addWordsToList();
+			cout << "Enter words to add (99 to quit)\n";
+			do {
+				cin >> theWord;
+				if (theWord != "99" && 
+					myList.seqSearch(theWord) < 0) 
+				{
+					myList.add(theWord);
+				}
+			} while (theWord != "99");
+
 			break;
 		case 3:
 			//find in list
-			findInList();
+			cout << "What do you want to find? ";
+			cin >> theWord;
+			pos = myList.seqSearch(theWord);
+			if (pos < 0) {
+				cout << theWord << " is not found" << endl;
+			}
+			else {
+				cout << theWord << " is found at pos " 
+					<< pos << endl;
+			}
 			break;
 		case 4:
 			//remove from the list
-			removeFromList();
+			cout << "What do you want to kill? ";
+			cin >> theWord;
+
+			myList.remove(theWord);
 			break;
 		}
 		
