@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "unorderedArrayListTypeString.h"
-unorderedArrayListType myList(300);//size of list
+unorderedArrayListType myList(300);
 
 int menu() {
 	cout << "1 to display the list\n";
