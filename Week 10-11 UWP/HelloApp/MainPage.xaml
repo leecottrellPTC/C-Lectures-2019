@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="HelloApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,19,0,0" Text="What is your name?" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Margin="25,44,0,0" Text="" VerticalAlignment="Top" Width="130"/>
+        <Button x:Name="displayButton" Content="Say Hello" Margin="25,81,0,0" VerticalAlignment="Top" Width="131" Click="DisplayButton_Click"/>
+        <TextBlock x:Name="outputBlock" HorizontalAlignment="Left" Height="173" Margin="175,19,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="1012" FontSize="72"/>
+    </Grid>
+</Page>
